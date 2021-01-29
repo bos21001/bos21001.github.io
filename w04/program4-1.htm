@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Week 4: Add Two Numbers</title>
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<h1>Week 4: Add Two Numbers</h1>
+		<h2>Christopher Mendes</h2>
+	</header>
+	<main>
+		<h3>Add Two Numbers</h3>
+		<label>Enter Number One: <input type="number" id="number1" /></label>
+		<label>Enter Number Two: <input type="number" id="number2" /></label>
+		<label><button onclick="addNumbers()">Add Numbers</button></label>
+		<hr />
+		<p><span id="output"></span></p>
+		<script>
+			function addNumbers() {
+				//INPUT >> Take the user input into variables.
+				const numberOne = document.getElementById('number1').value;
+				const numberTwo = document.getElementById('number2').value;
+				//PROCESSING >> Defines variables as float numbers addind them to a variable, and than creates the output text.
+				const result = parseFloat(numberOne) + parseFloat(numberTwo);
+				const output = `${numberOne} + ${numberTwo} = ${result}`;
+				//OUTPUT >> Shows the output text to the user.
+				document.getElementById('output').innerHTML = output;
+			}
+		</script>
+	</main>
+	<footer>
+		&copy;2021 &bull; Christopher Mendes &bull; BYU-Idaho &bull; CIT 160
+	</footer>
+</body>
+
+</html>
