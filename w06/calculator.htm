@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Week 6: Simple Calc</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Week 6: Simple Calc</h1>
+        <h2>Christopher Mendes</h2>
+    </header>
+    <main>
+        <h3>Simple Calc</h3>
+        <label>Enter Number One: <input type="text" id="number1" /></label>
+        <label>Enter the an arithmetic operator: <input type="text" id="arith" size="7" /></label>
+        <label>Enter Number Two: <input type="text" id="number2" /></label>
+        <label>What is the result?: <input type="number" id="result"></label>
+        <label><button onclick="simpleCalc()">Add Numbers</button></label>
+        <hr />
+        <p><span id="output1"></span></p>
+        <p><span id="output2"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Christopher Mendes &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function simpleCalc() {
+            const number1 = document.getElementById('number1').value,
+                arith = document.getElementById('arith').value,
+                number2 = document.getElementById('number2').value,
+                result = document.getElementById('result').value;
+            const message1 = "You entered " + result;
+
+            document.getElementById('output1').innerHTML = message1;
+
+            let calc, message2;
+            switch (arith) {
+                case '+':
+                    calc = parseFloat(number1) + parseFloat(number2);
+                    message2 = "The sum equals " + calc;
+                    break;
+
+                case '-':
+                    calc = parseFloat(number1) - parseFloat(number2);
+                    message2 = "The subtraction equals " + calc;
+                    break;
+
+                case '*':
+                    calc = parseFloat(number1) * parseFloat(number2);
+                    message2 = "The multiplication equals " + calc;
+                    break;
+
+                case '/':
+                    calc = parseFloat(number1) / parseFloat(number2);
+                    message2 = "The division equals " + calc;
+                    break;
+
+            }
+            document.getElementById('output2').innerHTML = message2;
+        }
+    </script>
+</body>
+
+</html>
+
+
+let calc, message2;
+if (arith == "+") {
+calc = parseFloat(number1) + arith + parseFloat(number2);
+message2 = "The sum equals " + calc;
+document.getElementById('output2').innerHTML = message2;
+}
+else if (arith == "-") {
+
+document.getElementById('output2').innerHTML = message2;
+}
+else if (arith == "*") {
+
+document.getElementById('output2').innerHTML = message2;
+}
+else if (arith == "/") {
+
+document.getElementById('output2').innerHTML = message2;
+}
