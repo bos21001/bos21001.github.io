@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Week 6: Simple Calc</title>
     <link href="css/style.css" rel="stylesheet" />
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -14,54 +15,25 @@
     </header>
     <main>
         <h3>Simple Calc</h3>
-        <label>Enter Number One: <input type="text" id="number1" /></label>
-        <label>Enter the an arithmetic operator: <input type="text" id="arith" size="7" /></label>
-        <label>Enter Number Two: <input type="text" id="number2" /></label>
-        <label>What is the result?: <input type="number" id="result"></label>
-        <label><button onclick="simpleCalc()">Add Numbers</button></label>
+        <!--INPUT Create a div to ask from user to enter the necessary information to a simple calculatatio-->
+        <!-- n1 + or - or / or * n2 = n3-->
+        <div>
+            <input type="text" id="number1" size="1" />
+            <input type="text" id="arith" size="1" value="+" />
+            <input type="text" id="number2" size="1" /> =
+            <input type="text" id="result" size="1" />
+        </div>
+        <!--PROCESSING Click a button to process the information-->
+        <label><button onclick="simpleCalc()">Calculate</button></label>
         <hr />
-        <p><span id="output1"></span></p>
-        <p><span id="output2"></span></p>
+        <!--OUTPUT show the giving result, the right result and if it is right or not with "Correct! 🏆" or "Incorrect 😢" -->
+        <label><span id="output1"></span><span id="output2"></span></label>
+        <p id="output3"></p>
     </main>
     <footer>
         &copy;2021 &bull; Christopher Mendes &bull; BYU-Idaho &bull; CIT 160
     </footer>
-    <script>
-        function simpleCalc() {
-            const number1 = document.getElementById('number1').value,
-                arith = document.getElementById('arith').value,
-                number2 = document.getElementById('number2').value,
-                result = document.getElementById('result').value;
-            const message1 = "You entered " + result;
 
-            document.getElementById('output1').innerHTML = message1;
-
-            let calc, message2;
-            switch (arith) {
-                case '+':
-                    calc = parseFloat(number1) + parseFloat(number2);
-                    message2 = "The sum equals " + calc;
-                    break;
-
-                case '-':
-                    calc = parseFloat(number1) - parseFloat(number2);
-                    message2 = "The subtraction equals " + calc;
-                    break;
-
-                case '*':
-                    calc = parseFloat(number1) * parseFloat(number2);
-                    message2 = "The multiplication equals " + calc;
-                    break;
-
-                case '/':
-                    calc = parseFloat(number1) / parseFloat(number2);
-                    message2 = "The division equals " + calc;
-                    break;
-
-            }
-            document.getElementById('output2').innerHTML = message2;
-        }
-    </script>
 </body>
 
 </html>
