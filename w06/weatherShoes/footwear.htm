@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Week 6: Weather Shoes</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Week 6: Weather Shoes</h1>
+        <h2>Christopher Mendes</h2>
+    </header>
+    <main>
+        <h3>Weather Shoes</h3>
+        <label for="weather">WHAT IS THE WEATHER?</label>
+        <!--INPUT Ask the user to select one option in a list of Hot, Rain, Snow and Unknown-->
+        <select name="weather" id="weather">
+            <option value="">--------Select an option--------</option>
+            <option value='hot'>Hot</option>
+            <option value='rain'>Rain</option>
+            <option value='snow'>Snow</option>
+            <option value='unknown'>Unknown</option>
+        </select>
+        <!--PROCESSING On click activate correctFootwear function-->
+        <label><button onclick="correctFootwear()">Select</button></label>
+        <hr />
+        <!--OUTPUT Print out the right choice for the Weather chosen-->
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Christopher Mendes &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+
+</html>
