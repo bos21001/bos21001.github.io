@@ -14,7 +14,7 @@ function correctFootwear() {
             output = "For a snowy day the correct footwear is boots.";
             break;
         case 'unknown':
-            output = "If you don't know just take a pair of shoes";
+            output = "If you don't know just take a pair of shoes 😁";
             break;
         default:
             output = "Choose one!!"
