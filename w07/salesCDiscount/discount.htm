@@ -15,7 +15,7 @@
     <script>
         function subtotCalc() {
             const dayOfWeek = new Date().getDay();
-            const inicial = document.getElementById('inicial').value;
+            const inicial = parseFloat(document.getElementById('inicial').value);
             let subtotal = inicial * 1.06;
 
             if (inicial > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
