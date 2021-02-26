@@ -3,38 +3,26 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Week 8: Sum up the Odd Values</title>
+	<title>Week 3: Add Two Numbers</title>
 	<link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
 	<header>
-		<h1>Week 8: Sum up the Odd Values</h1>
+		<h1>Week 3: Add Two Numbers</h1>
 		<h2>Christopher Mendes</h2>
 	</header>
 	<main>
-		<h3>Sum of Odds</h3>
-		<label>Enter an integer: <input type="number" id="num" /></label>
-		<label><button onclick="sumUp()">Calculate</button></label>
+		<h3>Add Two Numbers</h3>
+		<label>Enter Number One: <input type="text" id="number1" /></label>
+		<label>Enter Number Two: <input type="text" id="number2" /></label>
+		<label><button onclick="addNumbers()">Add Numbers</button></label>
 		<hr />
 		<p><span id="output"></span></p>
 	</main>
 	<footer>
 		&copy;2021 &bull; Christopher Mendes &bull; BYU-Idaho &bull; CIT 160
 	</footer>
-	<script>
-		function sumUp() {
-			const n = parseInt(document.getElementById("num").value);
-			let output = 0;
-			for (let i = 1; i <= n; i++) {
-
-				if (i % 2 != 0) {
-					output += i;
-				}
-			}
-			document.getElementById("output").innerHTML = `The sum of all odds between 1 and ${n} is equal to ${output}`;
-		}
-	</script>
 </body>
 
 </html>
