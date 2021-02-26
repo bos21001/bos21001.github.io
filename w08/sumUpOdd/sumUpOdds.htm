@@ -24,14 +24,19 @@
 	</footer>
 	<script>
 		function sumUp() {
+			//INPUT - From the document the the id num into n variable.
 			const n = parseInt(document.getElementById("num").value);
+			/*PROCESSING - Create an output variable assign it to 0, 
+			than create a for loop which contains an if statement of i % 0 != 0 */
 			let output = 0;
 			for (let i = 1; i <= n; i++) {
 
 				if (i % 2 != 0) {
+					//OUTPUT - Sum up all the i true results into the output variable
 					output += i;
 				}
 			}
+			//Output it into the documente by the output id
 			document.getElementById("output").innerHTML = `The sum of all odds between 1 and ${n} is equal to ${output}`;
 		}
 	</script>
