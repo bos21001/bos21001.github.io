@@ -7,13 +7,19 @@ function doInputOutput() {
     if (temperature <= 50 && windspeed >= 3) {
         document.getElementById('output').innerHTML = `Result: ${windchill.toFixed(1)} °F`;
     }
-    else if (windspeed >= 3) {
+    else if (temperature > 50 && windspeed < 3) {
+        alert('A Wind Chill value cannot be calculated for wind speeds less than 3 miles/hour.\nAnd a Wind Chill value cannot be calculated for temperatures greater than 50 degrees Fahrenheit.')
+    }
+    else if (windspeed < 3) {
         document.getElementById('output').innerHTML = 'Result: ERROR';
         alert('A Wind Chill value cannot be calculated for wind speeds less than 3 miles/hour');
     }
-    else if (temperature <= 50) {
+    else if (temperature > 50) {
         document.getElementById('output').innerHTML = 'Result: ERROR';
         alert('A Wind Chill value cannot be calculated for temperatures greater than 50 degrees Fahrenheit.');
+    }
+    else {
+        alert('Empty. Please enter an amount for each input spaces.');
     }
 }
 function windChill(tempF, speed) {
