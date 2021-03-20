@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Week 11: More Functions with Parameters</title>
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="js/script.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<h1>Week 11: More Functions with Parameters</h1>
+		<h2>Christopher Mendes</h2>
+	</header>
+	<main>
+		<h3>Loan Calculator
+		</h3>
+		<label for="principal">Amount borrowed: <input type="number" id="principal" placeholder="Principal" name="principal" required/></label>
+		<label for="annualRate">Annual interest rate: <input type="number" id="annualRate" placeholder="0.065" name="annualRate" required/></label>
+		<label for="years">Number of years: <input type="number" id="years" name="years" required/></label>
+		<label for="periodsPerYear">Payments per year: <input type="number" id="periodsPerYear" name="periodsPerYear" required/></label>
+		<label for="payPerPeriod">Number of payments paid to date: <input type="number" id="payPerPeriod" name="payPerPeriod" required></label>
+		<label><button onclick="doPayment()">Compute payment</button><button onclick="doBalance()">Compute payoff amount</button></label>
+		<hr />
+		<p><span id="paymentOutput"></span></p>
+		<p><span id="balanceOutput"></span></p>
+	</main>
+	<footer>
+		&copy;2021 &bull; Christopher Mendes &bull; BYU-Idaho &bull; CIT 160
+	</footer>
+</body>
+
+</html>
