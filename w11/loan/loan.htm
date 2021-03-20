@@ -21,7 +21,7 @@
 		<label for="years">Number of years: <input type="number" id="years" name="years" required/></label>
 		<label for="periodsPerYear">Payments per year: <input type="number" id="periodsPerYear" name="periodsPerYear" required/></label>
 		<label for="payPerPeriod">Number of payments paid to date: <input type="number" id="payPerPeriod" name="payPerPeriod" required></label>
-		<label><button onclick="doPayment()">Compute payment</button><button onclick="doBalance()">Compute payoff amount</button></label>
+		<button type="button" onclick="doPayment()">Compute payment</button><button type="button" onclick="doBalance()">Compute payoff amount</button>
 		<hr />
 		<p><span id="paymentOutput"></span></p>
 		<p><span id="balanceOutput"></span></p>
